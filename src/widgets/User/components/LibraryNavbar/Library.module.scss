@@ -1,0 +1,51 @@
+.LibraryNavbar{
+	@apply flex gap-10 mb-14 relative h-9 z-0;
+
+
+	&::after{
+		content: '';
+		background-color: #EDEFF4;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		z-index: 1;
+	}
+
+	&Link{
+		@apply  relative z-10;
+
+
+		&:hover::after {
+
+			@apply bg-purple-500 z-10 ;
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 2px;
+			transition: background-color 0.3s ease;
+		}
+
+
+		&Active {
+			@apply relative font-semibold  ;
+
+			&::after {
+				@apply bg-primary absolute z-10  ;
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 2px;
+				transition: background-color 0.3s ease;
+
+			}
+		}
+
+
+	}
+}

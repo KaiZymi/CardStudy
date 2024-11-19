@@ -1,0 +1,19 @@
+.card_inner{
+	@apply w-full h-96 bg-white mb-5 rounded-xl;
+	perspective: 1000px;
+	transition: transform 0.2s;
+	transform-style: preserve-3d;
+	box-shadow: 0 0 10px rgba(232, 233, 235, 0.6),  0 0 30px rgba(232, 233, 235, 0.6);
+
+}
+
+.card_front,
+.card_back {
+	@apply flex justify-center w-full h-full items-center text-3xl pr-3;
+	position: absolute;
+	backface-visibility: hidden;
+}
+
+.card_back{
+	transform: rotateX(180deg);
+}
